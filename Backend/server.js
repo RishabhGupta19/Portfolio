@@ -1,5 +1,5 @@
 const express = require('express');
-app.set('trust proxy', 1);
+
 const mongoose = require('mongoose');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
@@ -9,6 +9,7 @@ const morgan = require('morgan');
 require('dotenv').config();
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 5000;
 
 // Security middleware
