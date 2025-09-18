@@ -185,7 +185,7 @@ useEffect(() => {
   <div className="w-32 h-32 rounded-full mx-auto mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 p-1 shadow-2xl transform hover:scale-110 transition-all duration-300">
     <div className="w-full h-full rounded-full overflow-hidden">
       <img
-        src="../profile.jpg" 
+        src="../Profile.jpg" 
         alt="Rishabh Gupta"
         className="w-full h-full object-cover=50% object-center=50%"
       />
