@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import profilePic from '../Profile.jpg';
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Server, Award, GraduationCap, Briefcase, User, Send, Download, Star, Calendar, ChevronRight, Monitor, Globe } from 'lucide-react';
 <link href="/src/index.css" rel="stylesheet"></link>
 import { motion } from "framer-motion";
@@ -185,7 +186,7 @@ useEffect(() => {
   <div className="w-32 h-32 rounded-full mx-auto mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 p-1 shadow-2xl transform hover:scale-110 transition-all duration-300">
     <div className="w-full h-full rounded-full overflow-hidden">
       <img
-        src="../Profile.jpg" 
+        src={profilePic}
         alt="Rishabh Gupta"
         className="w-full h-full object-cover=50% object-center=50%"
       />
