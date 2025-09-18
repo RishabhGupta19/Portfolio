@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -13,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 // Security middleware
 app.use(helmet({
-  contentSecurityPolicy: true, // Disable for development
+  contentSecurityPolicy: false, // Disable for API-only server
 }));
 
 // Rate limiting
@@ -34,7 +33,11 @@ const contactLimiter = rateLimit({
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-portfolio-domain.com', 'https://your-vercel-app.vercel.app']
+    ? [
+        'https://rishabh-portfolio-frontend.vercel.app',
+        'https://your-custom-domain.com',
+        /\.vercel\.app$/
+      ]
     : ['http://localhost:3000', 'http://localhost:5174'],
   credentials: true
 }));
@@ -43,11 +46,8 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(morgan('combined'));
 
-// MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://rishabh134wf:Idontknow134we@cluster0.ndt6l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+// MongoDB connection (removed deprecated options)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://rishabh134wf:Idontknow134we@cluster0.ndt6l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('MongoDB connection error:', err));
 
@@ -97,7 +97,7 @@ const visitorSchema = new mongoose.Schema({
 const Visitor = mongoose.model('Visitor', visitorSchema);
 
 // Nodemailer configuration
-const transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransporter({
   service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
@@ -121,7 +121,8 @@ app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
-    uptime: process.uptime()
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV || 'development'
   });
 });
 
@@ -218,6 +219,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             <p style="font-size: 16px; line-height: 1.6;">
               Best regards,<br>
               <strong>Rishabh Gupta</strong><br>
+              Full-Stack Developer
             </p>
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #6c757d; font-size: 14px;">
@@ -285,7 +287,7 @@ app.get('/api/contacts', async (req, res) => {
   }
 });
 
-//Track visitor (optional)
+// Track visitor (optional)
 app.post('/api/track-visit', async (req, res) => {
   try {
     const visitor = new Visitor({
@@ -324,15 +326,6 @@ app.get('/api/stats', async (req, res) => {
   }
 });
 
-// Serve static files in production
-// if (process.env.NODE_ENV === 'production') {
-//  // app.use(express.static(path.join(__dirname, 'build')));
-  
-//   app.get('/*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-//   });
-// }
-
 // Error handling middleware
 app.use((error, req, res, next) => {
   console.error('Global error handler:', error);
@@ -342,9 +335,13 @@ app.use((error, req, res, next) => {
   });
 });
 
-// 404 handler
-app.use((error, req, res) => {
-  res.status(404).json({ error: 'Route not found' });
+// 404 handler - FIXED: Correct parameters (req, res) not (error, req, res)
+app.use((req, res) => {
+  res.status(404).json({ 
+    error: 'Route not found',
+    path: req.originalUrl,
+    method: req.method
+  });
 });
 
 app.listen(PORT, () => {
