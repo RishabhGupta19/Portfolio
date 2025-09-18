@@ -68,7 +68,7 @@ useEffect(() => {
         page: 'home' // or dynamically set the current page
       };
 
-      await fetch('http://localhost:5000/api/track-visit', {
+      await fetch('https://portfolio-backend-yyxv.onrender.com/api/track-visit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ useEffect(() => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('https://portfolio-backend-yyxv.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
