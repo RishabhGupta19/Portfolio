@@ -34,9 +34,16 @@ const contactLimiter = rateLimit({
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-portfolio-domain.com', 'https://your-vercel-app.vercel.app']
+    ? [
+        'https://portfolio-amber-nine-22.vercel.app',  // Your actual Vercel URL
+        'https://rishabh-portfolio-frontend.vercel.app',
+        /\.vercel\.app$/,  // Allow all vercel apps
+        /\.vercel\.com$/   // Allow vercel.com domains too
+      ]
     : ['http://localhost:3000', 'http://localhost:5174'],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(express.json({ limit: '10mb' }));
