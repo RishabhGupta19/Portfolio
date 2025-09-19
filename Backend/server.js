@@ -268,7 +268,7 @@ app.post('/api/track-visit', async (req, res) => {
     });
 
     await visitor.save();
-    res.status(200).json({ message: 'Visit tracked' });
+    res.status(200);
   } catch (error) {
     console.error('Track visit error:', error);
     res.status(500).json({ error: 'Server error' });
