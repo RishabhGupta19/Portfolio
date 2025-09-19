@@ -202,7 +202,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
 
     // Send auto-reply using Resend
     const autoReplyResult = await resend.emails.send({
-      from: 'Rishabh Gupta <onboarding@rishabhs.xyz>',
+      from: 'RishabhGupta@rishabhs.xyz',
       //from : "onboarding@resend.dev",
       to: [email],
       subject: 'Thanks for reaching out! - Rishabh Gupta',
