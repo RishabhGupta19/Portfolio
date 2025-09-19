@@ -77,7 +77,7 @@ useEffect(() => {
         body: JSON.stringify(visitorData)
       });
 
-      console.log('Visit tracked successfully');
+      
     } catch (error) {
       console.error('Error tracking visit:', error);
     }
