@@ -183,16 +183,9 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
            const submittedDate = new Date(newContact.submittedAt);
-            const istTime = submittedDate.toLocaleString('en-IN', { 
-              timeZone: 'Asia/Kolkata', 
-              hour12: true, 
-              year: 'numeric', 
-              month: '2-digit', 
-              day: '2-digit', 
-              hour: '2-digit', 
-              minute: '2-digit', 
-              second: '2-digit'
-            });
+           let istOffset = 5.5 * 60 * 60 * 1000;
+           let utcTime = date.getTime();        
+           let istTime = new Date(utcTime + istOffset);
             <p><strong>Submitted:</strong> ${istTime}</p>
 
             <h3 style="color: #333; margin-top: 30px;">Message:</h3>
