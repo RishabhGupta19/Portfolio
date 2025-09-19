@@ -465,6 +465,20 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
+//  Visitor tracking schema (optional)
+const visitorSchema = new mongoose.Schema({
+  ipAddress: String,
+  userAgent: String,
+  visitedAt: {
+    type: Date,
+    default: Date.now
+  },
+  referrer: String,
+  page: String
+});
+
+const Visitor = mongoose.model('Visitor', visitorSchema);
+
 // Routes
 app.get('/api/health', (req, res) => {
   res.json({ 
@@ -604,6 +618,24 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
   }
 });
 
+// Visitor tracking endpoint (optional)
+
+app.post('/api/track-visit', async (req, res) => {
+  try {
+    const visitor = new Visitor({
+      ipAddress: req.ip || req.connection.remoteAddress,
+      userAgent: req.get('User-Agent'),
+      referrer: req.get('Referrer') || req.body.referrer,
+      page: req.body.page || 'home'
+    });
+
+    await visitor.save();
+    res.status(200).json({ message: 'Visit tracked' });
+  } catch (error) {
+    console.error('Track visit error:', error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
 // Error handling middleware
 app.use((error, req, res, next) => {
   console.error('Global error handler:', error);
