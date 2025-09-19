@@ -182,12 +182,11 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             <h2 style="color: #333;">Contact Details:</h2>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
-           const submittedDate = new Date(newContact.submittedAt);
-           let istOffset = 5.5 * 60 * 60 * 1000;
-           let utcTime = date.getTime();        
-           let istTime = new Date(utcTime + istOffset);
-            <p><strong>Submitted:</strong> ${istTime}</p>
-
+           
+          const submittedDate = new Date(newContact.submittedAt);
+          const istDate = new Date(submittedDate.getTime() + (5.5 * 60 * 60 * 1000));
+          const formatted = istDate.toISOString().replace('T', ' ').substring(0, 19);
+          <p><strong>Submitted:</strong> ${formatted}</p>
             <h3 style="color: #333; margin-top: 30px;">Message:</h3>
             <div style="background: white; padding: 15px; border-left: 4px solid #667eea; margin: 10px 0;">
               ${message.replace(/\n/g, '<br>')}
