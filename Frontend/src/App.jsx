@@ -682,7 +682,7 @@ useEffect(() => {
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur rounded-lg hover:bg-slate-700/50 transition-colors">
+{/*                 <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur rounded-lg hover:bg-slate-700/50 transition-colors">
                   <Mail className="text-cyan-400" size={24} />
                   <div>
                     <p className="text-white font-semibold">Email</p>
@@ -690,7 +690,7 @@ useEffect(() => {
                       rishabh134we@gmail.com
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 {/* <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur rounded-lg hover:bg-slate-700/50 transition-colors">
                   <Phone className="text-cyan-400" size={24} />
@@ -701,7 +701,7 @@ useEffect(() => {
                     </a>
                   </div>
                 </div> */}
-
+{/* 
                 <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur rounded-lg hover:bg-slate-700/50 transition-colors">
                   <MapPin className="text-cyan-400" size={24} />
                   <div>
@@ -727,7 +727,7 @@ useEffect(() => {
                   >
                     <Linkedin size={24} />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 
