@@ -220,11 +220,12 @@ useEffect(() => {
               Get In Touch
             </button>
             <a 
-              href="mailto:rishabh134we@gmail.com" 
+              href="https://drive.google.com/file/d/19wJA0G3Tk6NTuMOQwI0LA0S_BcGm_aFl/view" 
               className="border border-slate-500 px-8 py-3 rounded-full hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 flex items-center space-x-2"
+              target="_blank"
             >
-              <Download size={20} />
-              <span>Contact Me</span>
+             
+              <span>Resume</span>
             </a>
           </div>
 
@@ -682,7 +683,7 @@ useEffect(() => {
               </div>
 
               <div className="space-y-6">
-{/*                 <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur rounded-lg hover:bg-slate-700/50 transition-colors">
+                <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur rounded-lg hover:bg-slate-700/50 transition-colors">
                   <Mail className="text-cyan-400" size={24} />
                   <div>
                     <p className="text-white font-semibold">Email</p>
@@ -690,7 +691,7 @@ useEffect(() => {
                       rishabh134we@gmail.com
                     </a>
                   </div>
-                </div> */}
+                </div> 
 
                 {/* <div className="flex items-center space-x-4 p-4 bg-slate-800/50 backdrop-blur rounded-lg hover:bg-slate-700/50 transition-colors">
                   <Phone className="text-cyan-400" size={24} />
