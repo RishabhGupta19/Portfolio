@@ -220,7 +220,7 @@ useEffect(() => {
               Get In Touch
             </button>
             <a 
-              href="https://drive.google.com/file/d/19wJA0G3Tk6NTuMOQwI0LA0S_BcGm_aFl/view" 
+              href="https://drive.google.com/drive/folders/1c7_kayTbqks-obkrFbPErSMj-ycbYHp_?usp=sharing" 
               className="border border-slate-500 px-8 py-3 rounded-full hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 flex items-center space-x-2"
               target="_blank"
             >
