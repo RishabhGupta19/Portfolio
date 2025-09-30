@@ -970,11 +970,11 @@ useEffect(() => {
         />
         
         {/* Grid pattern */}
-      <div
+    <div
   className="absolute inset-0"
   style={{
     backgroundImage: `
-      url(${profilePic}),
+      uurl(${profilePic}),,
       linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px)
     `,
@@ -991,7 +991,6 @@ useEffect(() => {
     transform: `translateY(${scrollY * 0.1}px)`
   }}
 />
-
 
       </div>
 
