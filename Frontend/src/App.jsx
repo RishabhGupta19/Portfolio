@@ -1614,11 +1614,11 @@ useEffect(() => {
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center p-6 rounded-xl bg-slate-700/30 hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-110">
                   <h4 className="text-xl font-semibold text-white mb-3">English</h4>
-                  <p className="text-slate-300">Full Professional Proficiency</p>
+                  <p className="text-slate-300">Full Proficiency</p>
                 </div>
                 <div className="text-center p-6 rounded-xl bg-slate-700/30 hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-110">
                   <h4 className="text-xl font-semibold text-white mb-3">Hindi</h4>
-                  <p className="text-slate-300">Full Professional Proficiency</p>
+                  <p className="text-slate-300">Full Proficiency</p>
                 </div>
               </div>
             </div>
