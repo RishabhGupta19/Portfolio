@@ -1087,11 +1087,10 @@ useEffect(() => {
             <div className="w-40 h-40 rounded-full mx-auto bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 p-1 shadow-2xl shadow-cyan-500/50 transform hover:scale-110 transition-all duration-500 hover:rotate-6" style={{ animation: 'glow 3s infinite' }}>
               <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center relative overflow-hidden">
                 {/* <User size={64} className="text-cyan-400 relative z-10" /> */} 
-               <img 
+                <img 
                     src={profilePic}   
                     alt="My Profile"
-                    className="w-full h-full object-fit rounded-full relative z-10"
-                  />
+                    className="w-full h-full object-fit rounded-full relative z-10" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 animate-pulse" />
               </div>
             </div>
