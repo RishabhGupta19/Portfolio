@@ -1236,7 +1236,7 @@ useEffect(() => {
       </section>
 
       {/* Skills Section with animated progress bars */}
-      <section id="skills" className="py-30 px-6 bg-slate-900/30 relative">
+      <section id="skills" className="py-28 px-6 bg-slate-900/30 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1251,9 +1251,9 @@ useEffect(() => {
               <div className="space-y-4">
                 {[
                   { name: 'React.js', level: 90 },
-                  { name: 'HTML5', level: 95 },
+                  { name: 'HTML5', level: 90 },
                   { name: 'CSS3', level: 90 },
-                  { name: 'JavaScript', level: 88 },
+                  { name: 'JavaScript', level: 90 },
                   { name: 'EJS', level: 80 }
                 ].map((skill, index) => (
                   <div key={skill.name} style={{ animation: `slideIn ${0.5 + index * 0.1}s ease-out` }}>
@@ -1280,10 +1280,10 @@ useEffect(() => {
               <h3 className="text-2xl font-bold mb-6 text-blue-400">Backend</h3>
               <div className="space-y-4">
                 {[
-                  { name: 'Node.js', level: 85 },
-                  { name: 'Express.js', level: 88 },
-                  { name: 'Java', level: 82 },
-                  { name: 'Python', level: 80 },
+                  { name: 'Node.js', level: 90 },
+                  { name: 'Express.js', level: 90 },
+                  { name: 'Java', level: 90 },
+                  { name: 'Python', level: 85 },
                   { name: 'C', level: 75 }
                 ].map((skill, index) => (
                   <div key={skill.name} style={{ animation: `slideIn ${0.5 + index * 0.1}s ease-out` }}>
@@ -1354,7 +1354,7 @@ useEffect(() => {
       </section>
 
       {/* Projects Section with enhanced 3D cards */}
-      <section id="projects" className="py-30 px-6 relative">
+      <section id="projects" className="py-28 px-6 relative">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1432,7 +1432,7 @@ useEffect(() => {
       </section>
 
       {/* Education Section with timeline */}
-      <section id="education" className="py-30 px-6 bg-slate-900/30 relative">
+      <section id="education" className="py-28 px-6 bg-slate-900/30 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1556,7 +1556,7 @@ useEffect(() => {
       </section> */}
 
       {/* Certificates Section */}
-      <section id="certificates" className="py-30 px-6 bg-slate-900/30 relative">
+      <section id="certificates" className="py-28 px-6 bg-slate-900/30 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1627,7 +1627,7 @@ useEffect(() => {
       </section>
 
       {/* Contact Section with enhanced form */}
-      <section id="contact" className="py-30 px-6 relative">
+      <section id="contact" className="py-28 px-6 relative">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
