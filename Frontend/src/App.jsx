@@ -1,5 +1,5 @@
 // import React, { useState, useEffect } from 'react';
-// import profilePic from '../Profile.jpg';
+ import profilePic from '../Profile.jpg';
 // import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Server, Award, GraduationCap, Briefcase, User, Send, Download, Star, Calendar, ChevronRight, Monitor, Globe } from 'lucide-react';
 // <link href="/src/index.css" rel="stylesheet"></link>
 // import { motion } from "framer-motion";
@@ -974,7 +974,7 @@ useEffect(() => {
   className="absolute inset-0"
   style={{
     backgroundImage: `
-      url('../Profile.jpg'),
+      url(${profilePic}),
       linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px)
     `,
