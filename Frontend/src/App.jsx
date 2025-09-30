@@ -974,7 +974,7 @@ useEffect(() => {
   className="absolute inset-0"
   style={{
     backgroundImage: `
-      url('./Profile.jpg'),
+      url('../Profile.jpg'),
       linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px)
     `,
