@@ -1109,7 +1109,7 @@ useEffect(() => {
           <div className="space-y-4" style={{ animation: 'slideIn 0.8s ease-out' }}>
             <h1 className="text-6xl md:text-8xl font-bold mb-4 relative">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent inline-block hover:scale-105 transition-transform duration-300">
-                Rishabh Gupa
+                Rishabh Gupta
               </span>
               <Rocket className="inline-block ml-4 text-cyan-400 animate-bounce" size={48} />
             </h1>
