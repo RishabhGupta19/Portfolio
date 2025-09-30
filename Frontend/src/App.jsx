@@ -1111,7 +1111,7 @@ useEffect(() => {
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent inline-block hover:scale-105 transition-transform duration-300">
                 Rishabh Gupta
               </span>
-              <Rocket className="inline-block ml-4 text-cyan-400 animate-bounce" size={48} />
+              {/* <Rocket className="inline-block ml-4 text-cyan-400 animate-bounce" size={48} /> */}
             </h1>
             
             <div className="flex items-center justify-center gap-3 text-xl md:text-2xl text-slate-300">
@@ -1130,7 +1130,7 @@ useEffect(() => {
           <div className="flex justify-center space-x-6 mt-8" style={{ animation: 'slideIn 1.2s ease-out' }}>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="relative bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 rounded-xl font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/80 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 group overflow-hidden"
+              className="relative bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 rounded-xl font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/80 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 group overflow-hidden cursor-pointer"
             >
               <span className="relative z-10" >Get In Touch</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor:pointer" />
