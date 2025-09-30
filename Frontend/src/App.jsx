@@ -970,7 +970,7 @@ useEffect(() => {
         />
         
         {/* Grid pattern */}
-       <div
+      <div
   className="absolute inset-0"
   style={{
     backgroundImage: `
@@ -991,6 +991,7 @@ useEffect(() => {
     transform: `translateY(${scrollY * 0.1}px)`
   }}
 />
+
 
       </div>
 
