@@ -970,27 +970,15 @@ useEffect(() => {
         />
         
         {/* Grid pattern */}
-    <div
-  className="absolute inset-0"
-  style={{
-    backgroundImage: `
-      uurl(${profilePic}),,
-      linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px)
-    `,
-    backgroundSize: `
-      cover,
-      50px 50px,
-      50px 50px
-    `,
-    backgroundPosition: `
-      center,
-      0 0,
-      0 0
-    `,
-    transform: `translateY(${scrollY * 0.1}px)`
-  }}
-/>
+  <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px',
+          transform: `translateY(${scrollY * 0.1}px)`
+        }} />
+      </div>
 
       </div>
 
