@@ -848,7 +848,7 @@ const Portfolio = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
 
-const sections = ['home', 'about', 'skills', 'projects', 'education', 'experience', 'certificates', 'contact'];
+const sections = ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'];
 
 useEffect(() => {
   let activeSectionRef = '';
@@ -1072,7 +1072,7 @@ useEffect(() => {
 
           {isMenuOpen && (
             <div className="md:hidden mt-4 space-y-2 bg-slate-800/90 p-4 rounded-xl backdrop-blur-lg border border-cyan-500/20">
-              {['home', 'about', 'skills', 'projects', 'education', 'experience', 'certificates', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
