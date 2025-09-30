@@ -1796,7 +1796,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Server, Award, GraduationCap, Briefcase, User, Send, Download, Star, Calendar, ChevronRight, Monitor, Globe, Rocket, Zap, Terminal } from 'lucide-react';
-import profilePhoto from './assets/Profile.jpg';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
