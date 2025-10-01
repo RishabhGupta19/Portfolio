@@ -1,5 +1,6 @@
 // import React, { useState, useEffect } from 'react';
  import profilePic from '../Profile.jpg';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Server, Award, GraduationCap, Briefcase, User, Send, Download, Star, Calendar, ChevronRight, Monitor, Globe } from 'lucide-react';
 // <link href="/src/index.css" rel="stylesheet"></link>
 // import { motion } from "framer-motion";
