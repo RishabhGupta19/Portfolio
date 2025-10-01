@@ -1,6 +1,8 @@
 // import React, { useState, useEffect } from 'react';
  import profilePic from '../Profile.jpg';
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker } from "react-icons/fa";
+import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC } from "react-icons/si";
 // import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Server, Award, GraduationCap, Briefcase, User, Send, Download, Star, Calendar, ChevronRight, Monitor, Globe } from 'lucide-react';
 // <link href="/src/index.css" rel="stylesheet"></link>
 // import { motion } from "framer-motion";
@@ -848,6 +850,28 @@ const Portfolio = () => {
   const [submitMessage, setSubmitMessage] = useState('');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
+  // icons sections 
+
+  const icons = {
+  React: <FaReact className="inline text-cyan-400 mr-2" />,
+  "React.js": <FaReact className="inline text-cyan-400 mr-2" />,
+  HTML5: <FaHtml5 className="inline text-orange-500 mr-2" />,
+  CSS3: <FaCss3Alt className="inline text-blue-500 mr-2" />,
+  JavaScript: <FaJs className="inline text-yellow-400 mr-2" />,
+  EJS: <SiEjs className="inline text-green-400 mr-2" />,
+
+  "Node.js": <FaNodeJs className="inline text-green-500 mr-2" />,
+  "Express.js": <SiExpress className="inline text-gray-300 mr-2" />,
+  Java: <FaJava className="inline text-red-500 mr-2" />,
+  Python: <FaPython className="inline text-yellow-400 mr-2" />,
+  C: <SiC className="inline text-blue-400 mr-2" />,
+
+  MongoDB: <SiMongodb className="inline text-green-500 mr-2" />,
+  MySQL: <SiMysql className="inline text-blue-500 mr-2" />,
+  Git: <FaGitAlt className="inline text-red-500 mr-2" />,
+  AWS: <FaAws className="inline text-orange-500 mr-2" />,
+  Docker: <FaDocker className="inline text-blue-400 mr-2" />,
+};
 
 const sections = ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'];
 
@@ -1281,7 +1305,11 @@ useEffect(() => {
                 ].map((skill, index) => (
                   <div key={skill.name} style={{ animation: `slideIn ${0.5 + index * 0.1}s ease-out` }}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-slate-300">{skill.name}</span>
+                      {/* <span className="text-slate-300">{skill.name}</span> */}
+                     <span className="text-slate-300 flex items-center">
+                         {icons[skill.name]} {skill.name}
+                       </span>
+
                       <span className="text-cyan-400">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2.5 overflow-hidden">
@@ -1311,7 +1339,11 @@ useEffect(() => {
                 ].map((skill, index) => (
                   <div key={skill.name} style={{ animation: `slideIn ${0.5 + index * 0.1}s ease-out` }}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-slate-300">{skill.name}</span>
+                      {/* <span className="text-slate-300">{skill.name}</span> */}
+                     <span className="text-slate-300 flex items-center">
+                            {icons[skill.name]} {skill.name}
+                          </span>
+
                       <span className="text-blue-400">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2.5 overflow-hidden">
@@ -1341,7 +1373,11 @@ useEffect(() => {
                 ].map((skill, index) => (
                   <div key={skill.name} style={{ animation: `slideIn ${0.5 + index * 0.1}s ease-out` }}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-slate-300">{skill.name}</span>
+                      {/* <span className="text-slate-300">{skill.name}</span> */}
+                     <span className="text-slate-300 flex items-center">
+                          {icons[skill.name]} {skill.name}
+                        </span>
+
                       <span className="text-purple-400">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-2.5 overflow-hidden">
