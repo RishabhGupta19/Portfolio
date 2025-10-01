@@ -878,6 +878,21 @@ useEffect(() => {
   return () => window.removeEventListener('scroll', handleScroll);
 }, []);
 
+const [currentTitle, setCurrentTitle] = useState(0);
+const titles = [
+  'Full-Stack Developer',
+  'MERN Stack Developer', 
+  'Software Engineer'
+];
+
+// Rotate titles every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitle((prev) => (prev + 1) % titles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+ 
   // For visitors tracking
 useEffect(() => {
   const trackVisit = async () => {
@@ -1007,6 +1022,13 @@ useEffect(() => {
       </div>
 
       <style>{`
+          @keyframes fadeInOut {
+          0% { opacity: 0; transform: translateY(10px); }
+          10% { opacity: 1; transform: translateY(0); }
+          90% { opacity: 1; transform: translateY(0); }
+          100% { opacity: 0; transform: translateY(-10px); }
+        }
+      
         @keyframes float {
           0%, 100% { transform: translateY(0px) translateX(0px); }
           25% { transform: translateY(-20px) translateX(10px); }
@@ -1116,7 +1138,7 @@ useEffect(() => {
             
             <div className="flex items-center justify-center gap-3 text-xl md:text-2xl text-slate-300">
               <Terminal className="text-cyan-400" size={28} />
-              <span>Aspiring Full-Stack Developer</span>
+              <span>{titles[currentTitle]}</span>
               <Zap className="text-yellow-400 animate-pulse" size={28} />
             </div>
           </div>
