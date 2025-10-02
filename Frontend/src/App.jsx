@@ -1142,7 +1142,7 @@ useEffect(() => {
               <div className="w-full h-full rounded-full bg-slate-800 relative overflow-hidden">
                 {/* <User size={64} className="text-cyan-400 relative z-10" /> */}
                  <img 
-                    src={profilePic}   // ✅ if your image is in /public/Profile.jpg
+                    src={profilePic}  
                     alt="My Profile"
                     className="w-full h-full object-fit rounded-full relative z-10"
                   />
@@ -1225,7 +1225,7 @@ useEffect(() => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-slate-300 leading-relaxed backdrop-blur-sm bg-slate-800/30 p-6 rounded-xl border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300 transform hover:scale-105">
-                I'm a passionate B.Tech Computer Science Engineering student at Dayananda Sagar University 
+                I'm a passionate B.Tech Computer Science Engineering final year student at Dayananda Sagar University 
                 with a strong foundation in full-stack development. My journey in tech has been driven by 
                 curiosity and a desire to create meaningful digital solutions.
               </p>
@@ -1425,7 +1425,7 @@ useEffect(() => {
             {[
               {
                 title: 'Daily Drift - Blogging Platform',
-                desc: 'Full-stack blogging platform with CRUD features, authentication, and responsive UI. Built with Node.js, Express.js, EJS, and MongoDB.',
+                desc: 'Full-stack blogging platform with CRUD features, authentication(JWT), and responsive UI. Built with Node.js, Express.js, EJS, and MongoDB.',
                 tech: ['Node.js', 'Express.js', 'MongoDB', 'EJS', 'CSS'],
                 link: 'https://daily-drift.onrender.com/',
                 date: 'Jan 2025 - Mar 2025',
