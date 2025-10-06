@@ -1,11 +1,10 @@
 // import React, { useState, useEffect } from 'react';
  import profilePic from '../Profile.jpg';
-import { SpeedInsights } from "@vercel/speed-insights/react";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker } from "react-icons/fa";
-import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC } from "react-icons/si";
+// Removed unused SpeedInsights to reduce bundle size
+// Defer react-icons to reduce initial bundle; loaded on intersection
 // import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Database, Server, Award, GraduationCap, Briefcase, User, Send, Download, Star, Calendar, ChevronRight, Monitor, Globe } from 'lucide-react';
 // <link href="/src/index.css" rel="stylesheet"></link>
-// import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // not used
 // const Portfolio = () => {
 //   const [activeSection, setActiveSection] = useState('home');
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -853,25 +852,25 @@ const Portfolio = () => {
   // icons sections 
 
   const icons = {
-  React: <FaReact className="inline text-cyan-400 mr-2" />,
-  "React.js": <FaReact className="inline text-cyan-400 mr-2" />,
-  HTML5: <FaHtml5 className="inline text-orange-500 mr-2" />,
-  CSS3: <FaCss3Alt className="inline text-blue-500 mr-2" />,
-  JavaScript: <FaJs className="inline text-yellow-400 mr-2" />,
-  EJS: <SiEjs className="inline text-green-400 mr-2" />,
+    React: <Monitor className="inline text-cyan-400 mr-2" />,
+    "React.js": <Monitor className="inline text-cyan-400 mr-2" />,
+    HTML5: <Code className="inline text-orange-500 mr-2" />,
+    CSS3: <Code className="inline text-blue-500 mr-2" />,
+    JavaScript: <Zap className="inline text-yellow-400 mr-2" />,
+    EJS: <Code className="inline text-green-400 mr-2" />,
 
-  "Node.js": <FaNodeJs className="inline text-green-500 mr-2" />,
-  "Express.js": <SiExpress className="inline text-gray-300 mr-2" />,
-  Java: <FaJava className="inline text-red-500 mr-2" />,
-  Python: <FaPython className="inline text-yellow-400 mr-2" />,
-  C: <SiC className="inline text-blue-400 mr-2" />,
+    "Node.js": <Server className="inline text-green-500 mr-2" />,
+    "Express.js": <Server className="inline text-gray-300 mr-2" />,
+    Java: <Code className="inline text-red-500 mr-2" />,
+    Python: <Code className="inline text-yellow-400 mr-2" />,
+    C: <Code className="inline text-blue-400 mr-2" />,
 
-  MongoDB: <SiMongodb className="inline text-green-500 mr-2" />,
-  MySQL: <SiMysql className="inline text-blue-500 mr-2" />,
-  Git: <FaGitAlt className="inline text-red-500 mr-2" />,
-  AWS: <FaAws className="inline text-orange-500 mr-2" />,
-  Docker: <FaDocker className="inline text-blue-400 mr-2" />,
-};
+    MongoDB: <Database className="inline text-green-500 mr-2" />,
+    MySQL: <Database className="inline text-blue-500 mr-2" />,
+    Git: <Code className="inline text-red-500 mr-2" />,
+    AWS: <Globe className="inline text-orange-500 mr-2" />,
+    Docker: <Server className="inline text-blue-400 mr-2" />,
+  };
 
 const sections = ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'];
 
@@ -1141,11 +1140,19 @@ useEffect(() => {
             <div className="w-40 h-40 rounded-full mx-auto bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 p-1 shadow-2xl shadow-cyan-500/50 transform hover:scale-110 transition-all duration-500 hover:rotate-6" style={{ animation: 'glow 3s infinite' }}>
               <div className="w-full h-full rounded-full bg-slate-800 relative overflow-hidden">
                 {/* <User size={64} className="text-cyan-400 relative z-10" /> */}
-                 <img 
-                    src={profilePic}  
-                    alt="My Profile"
-                    className="w-full h-full object-fit rounded-full relative z-10"
-                  />
+                 <picture>
+                   <source srcSet={new URL('../Profile.jpg?as=webp&width=320', import.meta.url).href} type="image/webp" />
+                   <img 
+                      src={profilePic}
+                      alt="My Profile"
+                      className="w-full h-full object-fit rounded-full relative z-10"
+                      width={160}
+                      height={160}
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
+                 </picture>
                 
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 animate-pulse" />
               </div>
@@ -1214,7 +1221,7 @@ useEffect(() => {
       </section>
 
       {/* About Section with 3D cards */}
-      <section id="about" className="py-30 px-6 relative">
+      <section id="about" className="py-30 px-6 relative" style={{ contentVisibility: 'auto', containIntrinsicSize: '1000px' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1283,7 +1290,7 @@ useEffect(() => {
       </section>
 
       {/* Skills Section with animated progress bars */}
-      <section id="skills" className="py-28 px-6 bg-slate-900/30 relative">
+      <section id="skills" className="py-28 px-6 bg-slate-900/30 relative" style={{ contentVisibility: 'auto', containIntrinsicSize: '1200px' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1413,7 +1420,7 @@ useEffect(() => {
       </section>
 
       {/* Projects Section with enhanced 3D cards */}
-      <section id="projects" className="py-28 px-6 relative">
+      <section id="projects" className="py-28 px-6 relative" style={{ contentVisibility: 'auto', containIntrinsicSize: '1400px' }}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1499,7 +1506,7 @@ useEffect(() => {
       </section>
 
       {/* Education Section with timeline */}
-      <section id="education" className="py-28 px-6 bg-slate-900/30 relative">
+      <section id="education" className="py-28 px-6 bg-slate-900/30 relative" style={{ contentVisibility: 'auto', containIntrinsicSize: '900px' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1623,7 +1630,7 @@ useEffect(() => {
       </section> */}
 
       {/* Certificates Section */}
-      <section id="certificates" className="py-28 px-6 bg-slate-900/30 relative">
+      <section id="certificates" className="py-28 px-6 bg-slate-900/30 relative" style={{ contentVisibility: 'auto', containIntrinsicSize: '900px' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
@@ -1694,7 +1701,7 @@ useEffect(() => {
       </section>
 
       {/* Contact Section with enhanced form */}
-      <section id="contact" className="py-28 px-6 relative">
+      <section id="contact" className="py-28 px-6 relative" style={{ contentVisibility: 'auto', containIntrinsicSize: '900px' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-20">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent inline-block hover:scale-110 transition-transform duration-300">
