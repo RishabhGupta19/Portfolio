@@ -1440,6 +1440,14 @@ useEffect(() => {
                 color: 'blue'
               },
               {
+                title: 'Personal Expense Tracker',
+                desc: 'A full-stack personal expense tracker web application built with the MERN Stack featuring CRUD operations, expense categorization, filtering, sorting, and real-time statistics with a responsive UI.',
+                tech: ['Node.js', 'Express.js', 'MongoDB','React' , 'CSS','MERN','REST API'],
+                link: 'https://personal-expense-tracker-rouge-seven.vercel.app/',
+                date: 'Aug 2025 - Sep 2025',
+                color: 'cyan'
+              },
+              {
                 title: 'Hospital Management System',
                 desc: 'Doctor appointment booking system with Flask backend and MySQL database. Automated patient-doctor scheduling with intuitive UI.',
                 tech: ['Python', 'Flask', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
