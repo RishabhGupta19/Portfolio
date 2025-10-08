@@ -1398,7 +1398,7 @@ useEffect(() => {
           <div className="mt-16 text-center">
             <h3 className="text-2xl font-bold mb-8 text-white">Additional Technologies</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {['RESTful APIs', 'Postman', 'Cloudinary', 'Vercel', 'Render', 'JWT', 'Agile Methodologies', 'OOP'].map((tech, index) => (
+              {['RESTful APIs', 'Postman', 'Cloudinary', 'Vercel', 'Render', 'JWT', 'Agile Methodologies', 'OOP','Socket.io'].map((tech, index) => (
                 <span 
                   key={tech} 
                   className="bg-slate-800/50 backdrop-blur px-6 py-3 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-slate-700/50 hover:scale-110 transition-all duration-300 border border-cyan-500/20 hover:border-cyan-500/50 cursor-pointer"
