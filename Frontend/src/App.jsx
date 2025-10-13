@@ -630,7 +630,7 @@ useEffect(() => {
                 title: 'Hospital Management System',
                 desc: 'Doctor appointment booking system with Flask backend and MySQL database. Automated patient-doctor scheduling with intuitive UI.',
                 tech: ['Python', 'Flask', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-                link: null,
+                link: 'https://github.com/RishabhGupta19/Doctor-appointment-System',
                 date: 'Apr 2024 - Jun 2024',
                 color: 'purple'
               }
