@@ -610,6 +610,14 @@ useEffect(() => {
                 date: 'Feb 2025 - Jun 2025',
                 color: 'blue'
               },
+               {
+                title: 'Secret Chatting App',
+                desc: 'A real-time peer-to-peer secret chat application that allows users to create or join private chat rooms using a unique 4-digit code.The messages are instant, private, and persist locally until the user manually disconnects — ensuring both speed and privacy.',
+                tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Sockrt.IO','CORS'],
+                link: 'https://secret-chatting-app.vercel.app/',
+                date: 'Oct 2025 - Oct 2025',
+                color: 'blue'
+              },
               {
                 title: 'Personal Expense Tracker',
                 desc: 'A full-stack personal expense tracker web application built with the MERN Stack featuring CRUD operations, expense categorization, filtering, sorting, and real-time statistics with a responsive UI.',
