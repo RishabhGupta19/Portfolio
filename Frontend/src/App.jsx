@@ -613,7 +613,7 @@ useEffect(() => {
                {
                 title: 'Secret Chatting App',
                 desc: 'A real-time peer-to-peer secret chat application that allows users to create or join private chat rooms using a unique 4-digit code.The messages are instant, private, and persist locally until the user manually disconnects — ensuring both speed and privacy.',
-                tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Sockrt.IO','CORS'],
+                tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO','CORS'],
                 link: 'https://secret-chatting-app.vercel.app/',
                 date: 'Oct 2025 - Oct 2025',
                 color: 'blue'
