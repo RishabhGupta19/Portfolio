@@ -11,7 +11,7 @@ const AIFitnessSection = () => {
     backend: ['Node.js', 'Express.js', 'Java', 'Python', 'C'],
     database: ['MongoDB', 'MySQL'],
     tools: ['Git', 'AWS', 'Docker', 'Postman', 'RESTful APIs'],
-    other: ['Data Structures', 'Algorithms', 'OOP', 'MERN Stack']
+    other: ['Data Structures', 'Algorithms', 'OOP', 'MERN Stack,"JWT","Socket.io","Agile Methodologies","Render","Vercel"]
   };
 
   const analyzeJobFit = async () => {
@@ -138,7 +138,7 @@ Provide a JSON response with the following structure (only return valid JSON, no
             <Zap className="text-yellow-400" size={40} />
           </div>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            Curious how my skills align with your job opening? Paste the job description below and let AI provide a detailed analysis of my suitability for the role.
+           Wondering how well your skills match the job? Just drop the job description below — let AI instantly reveal how fit you are for the role!
           </p>
         </div>
 
