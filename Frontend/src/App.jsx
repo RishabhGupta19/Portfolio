@@ -3,6 +3,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker } from "react-icons/fa";
 import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC } from "react-icons/si";
+import AIFitnessSection from './AIFitneddSection.jsx';
 
 
 //Latest Code 
@@ -260,7 +261,7 @@ useEffect(() => {
             </div>
             
             <div className="hidden md:flex space-x-1">
-              {['home', 'about', 'skills', 'projects', 'education', 'experience', 'certificates', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'projects','ai-Fitness' ,'education', 'experience', 'certificates', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -268,7 +269,7 @@ useEffect(() => {
                     activeSection === section ? 'text-cyan-400' : 'hover:text-cyan-400'
                   }`}
                 >
-                  {section}
+                  {section.replace('-', ' ')}
                   {activeSection === section && (
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
                   )}
@@ -290,7 +291,7 @@ useEffect(() => {
 
           {isMenuOpen && (
             <div className="md:hidden mt-4 space-y-2 bg-slate-800/90 p-4 rounded-xl backdrop-blur-lg border border-cyan-500/20">
-              {['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'projects','ai-Fitness', 'education', 'certificates', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -689,6 +690,7 @@ useEffect(() => {
           </div>
         </div>
       </section>
+     <AIFitnessSection></AIFitnessSection>
 
       {/* Education Section with timeline */}
       <section id="education" className="py-28 px-6 bg-slate-900/30 relative">
