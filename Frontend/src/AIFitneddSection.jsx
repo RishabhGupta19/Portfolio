@@ -11,7 +11,7 @@ const AIFitnessSection = () => {
     backend: ['Node.js', 'Express.js', 'Java', 'Python', 'C'],
     database: ['MongoDB', 'MySQL'],
     tools: ['Git', 'AWS', 'Docker', 'Postman', 'RESTful APIs'],
-    other: ['Data Structures', 'Algorithms', 'OOP', 'MERN Stack,"JWT","Socket.io","Agile Methodologies","Render","Vercel"]
+    other: ['Data Structures', 'Algorithms', 'OOP', 'MERN Stack',"JWT","Socket.io","Agile Methodologies","Render","Vercel"]
   };
 
   const analyzeJobFit = async () => {
