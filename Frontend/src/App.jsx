@@ -45,7 +45,7 @@ const Portfolio = () => {
   Docker: <FaDocker className="inline text-blue-400 mr-2" />,
 };
 
-const sections = ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'];
+const sections = ['home', 'about', 'skills', 'projects','ai-fitness', 'education', 'certificates', 'contact'];
 
 useEffect(() => {
   let activeSectionRef = '';
@@ -261,7 +261,7 @@ useEffect(() => {
             </div>
             
             <div className="hidden md:flex space-x-1">
-              {['home', 'about', 'skills', 'projects','ai-Fitness' ,'education', 'experience', 'certificates', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'projects','ai-fitness' ,'education', 'experience', 'certificates', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -291,7 +291,7 @@ useEffect(() => {
 
           {isMenuOpen && (
             <div className="md:hidden mt-4 space-y-2 bg-slate-800/90 p-4 rounded-xl backdrop-blur-lg border border-cyan-500/20">
-              {['home', 'about', 'skills', 'projects','ai-Fitness', 'education', 'certificates', 'contact'].map((section) => (
+              {['home', 'about', 'skills', 'projects','ai-fitness', 'education', 'certificates', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
