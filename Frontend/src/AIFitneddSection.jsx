@@ -138,7 +138,7 @@ Provide a JSON response with the following structure (only return valid JSON, no
             <Zap className="text-yellow-400" size={40} />
           </div>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
-           Wondering how well your skills match the job? Just drop the job description below — let AI instantly reveal how fit you are for the role!
+           Wondering how well my skills match the job? Just drop the job description below — let AI instantly reveal how fit I am for the role!
           </p>
         </div>
 
