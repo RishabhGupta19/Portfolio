@@ -603,6 +603,14 @@ useEffect(() => {
                 color: 'cyan'
               },
               {
+                title: 'AI InterView Prep',
+                desc: 'This AI-Powered Interview Prep App simulates job interviews by using Gemini to generate personalized questions from a Job Description (JD) and evaluate user responses against their uploaded Resume using RAG.',
+                tech: ['Node.js', 'Express.js', 'MongoDB', 'Tailwind', 'JWT','Bcryptjs','Multer','PDF-Parse','Cloudinary','Gemini API','RAG (Retrieval-Augmented Generation)'],
+                link: 'https://ai-interview-prep-bice-eight.vercel.app/',
+                date: 'Oct 2025 - Oct 2025',
+                color: 'cyan'
+              },
+              {
                 title: 'AI-Driven Learning Platform',
                 desc: 'Multilingual learning tool with Assembly AI for speech recognition and Google Translator API for real-time translation with subtitles.',
                 tech: ['React', 'Node.js', 'Python', 'MongoDB', 'Assembly AI'],
