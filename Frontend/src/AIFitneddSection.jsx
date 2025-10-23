@@ -253,7 +253,7 @@ Provide a JSON response with the following structure (only return valid JSON, no
                   ))}
                 </div>
               </div>
-            )} */ */}
+            )} */}
 
             {/* Strengths */}
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/20 shadow-2xl">
