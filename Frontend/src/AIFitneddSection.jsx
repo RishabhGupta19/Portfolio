@@ -239,7 +239,7 @@ Provide a JSON response with the following structure (only return valid JSON, no
             </div>
 
             {/* Missing Skills */}
-            {aiResults.missingSkills.length > 0 && (
+            {/* /* {aiResults.missingSkills.length > 0 && (
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-2xl p-8 border border-yellow-500/20 shadow-2xl">
                 <div className="flex items-center gap-3 mb-6">
                   <AlertCircle className="text-yellow-400" size={32} />
@@ -253,7 +253,7 @@ Provide a JSON response with the following structure (only return valid JSON, no
                   ))}
                 </div>
               </div>
-            )}
+            )} */ */}
 
             {/* Strengths */}
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/20 shadow-2xl">
