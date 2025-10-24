@@ -89,7 +89,23 @@ const titles = [
     }, 3000);
     return () => clearInterval(interval);
   }, []);
- 
+ // ---  Typewriter Effect Component ---
+const Typewriter = ({ text, speed = 100 }) => {
+    const [displayedText, setDisplayedText] = useState('');
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        if (index < text.length) {
+            const timer = setTimeout(() => {
+                setDisplayedText(prev => prev + text[index]);
+                setIndex(prev => prev + 1);
+            }, speed);
+            return () => clearTimeout(timer);
+        }
+    }, [index, speed, text]);
+
+    return <span>{displayedText}</span>;
+};
   // For visitors tracking
 useEffect(() => {
   const trackVisit = async () => {
@@ -335,7 +351,8 @@ useEffect(() => {
             
             <div className="flex items-center justify-center gap-3 text-xl md:text-2xl text-slate-300">
               <Terminal className="text-cyan-400" size={28} />
-              <span>{titles[currentTitle]}</span>
+              <span><Typewriter text={titles[currentTitle]} speed={80} />
+              </span>
               <Zap className="text-yellow-400 animate-pulse" size={28} />
             </div>
           </div>
