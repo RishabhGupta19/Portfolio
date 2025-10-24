@@ -372,7 +372,7 @@ useEffect(() => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor:pointer" />
             </button>
             <a 
-              href="https://drive.google.com/drive/folders/1c7_kayTbqks-obkrFbPErSMj-ycbYHp_?usp=sharing" 
+              href="https://drive.google.com/file/d/1vnC7RseR0Z27zipMfGqIxNh8b3kgW4GO/view?usp=sharing" 
               target="_blank"
               className="relative border-2 border-cyan-500 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center space-x-2 transform hover:scale-105 hover:-translate-y-1 group"
             >
