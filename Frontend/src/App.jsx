@@ -428,7 +428,7 @@ useEffect(() => {
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl backdrop-blur border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 card-3d group">
                   <Code className="mx-auto mb-3 text-cyan-400 group-hover:scale-125 transition-transform duration-300" size={40} />
-                  <div className="text-3xl font-bold text-white">3+</div>
+                  <div className="text-3xl font-bold text-white">5+</div>
                   <div className="text-slate-400">Major Projects</div>
                 </div>
                 <div className="text-center p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl backdrop-blur border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 card-3d group">
