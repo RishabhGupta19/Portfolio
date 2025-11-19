@@ -23,7 +23,7 @@ const MessageBubble = ({ message }) => {
           {isAgent && (
             <div className="mt-2 flex items-center gap-1 text-xs text-cyan-400/60">
               <Sparkles size={12} />
-              <span>AI Generated</span>
+            
             </div>
           )}
         </div>
