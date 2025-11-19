@@ -4,7 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker } from "react-icons/fa";
 import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC } from "react-icons/si";
 import AIFitnessSection from './AIFitneddSection.jsx';
-import Typewriter from './typewriter.jsx'
+import PortfolioAIChatbot from './AI';
+import Typewriter from './typewriter.jsx';
 
 
 //Latest Code 
@@ -1060,6 +1061,7 @@ useEffect(() => {
           </div>
         </div>
       </footer>
+     <PortfolioAIChatbot/>
     </div>
   );
 };
