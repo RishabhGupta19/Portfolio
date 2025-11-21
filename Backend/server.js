@@ -35,7 +35,7 @@ const limiter = rateLimit({
   max: 100,
   message: 'Too many requests from this IP, please try again later.',
 });
-app.use('/api/', limiter);
+
 
 const contactLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
@@ -80,7 +80,7 @@ app.use(
 );
 app.options('*', cors());
 
-
+app.use('/api/', limiter);
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(morgan('combined'));
