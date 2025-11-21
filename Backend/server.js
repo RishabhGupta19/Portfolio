@@ -60,24 +60,18 @@ const contactLimiter = rateLimit({
 //   optionsSuccessStatus: 200
 // }));
 
-app.use(
-  cors({
-    origin: process.env.NODE_ENV === "production"
-      ? [
-          "https://portfolio-amber-nine-22.vercel.app",
-          /^https:\/\/.*\.vercel\.app$/,
-          /^https:\/\/.*\.vercel\.com$/,
-          /^http:\/\/localhost:\d+$/, // allow ALL localhost ports
-        ]
-      : [
-          /^http:\/\/localhost:\d+$/, // allow Vite on any port
-        ],
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-    optionsSuccessStatus: 200,
-  })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:5173",                // Explicitly allow Vite Localhost
+    "http://localhost:3000",                // Allow standard React Localhost
+    "https://portfolio-amber-nine-22.vercel.app", // Your Vercel Domain
+    "https://portfolio-backend-yyxv.onrender.com" // Your Backend Domain (for self-pinging)
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+  optionsSuccessStatus: 200
+}));
 app.options('*', cors());
 
 app.use('/api/', limiter);
