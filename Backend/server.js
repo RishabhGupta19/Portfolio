@@ -44,21 +44,41 @@ const contactLimiter = rateLimit({
 });
 
 // Middleware
-app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? [
-        'https://portfolio-amber-nine-22.vercel.app',
-        /^https:\/\/.*\.vercel\.app$/,
-        /^https:\/\/.*\.vercel\.com$/,
-        'http://localhost:3000',
-        'http://localhost:5174'
-      ]
-    : ['http://localhost:3000', 'http://localhost:5173'],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-  optionsSuccessStatus: 200
-}));
+// app.use(cors({
+//   origin: process.env.NODE_ENV === 'production' 
+//     ? [
+//         'https://portfolio-amber-nine-22.vercel.app',
+//         /^https:\/\/.*\.vercel\.app$/,
+//         /^https:\/\/.*\.vercel\.com$/,
+//         'http://localhost:3000',
+//         'http://localhost:5174'
+//       ]
+//     : ['http://localhost:3000', 'http://localhost:5173'],
+//   credentials: true,
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+//   optionsSuccessStatus: 200
+// }));
+
+app.use(
+  cors({
+    origin: process.env.NODE_ENV === "production"
+      ? [
+          "https://portfolio-amber-nine-22.vercel.app",
+          /^https:\/\/.*\.vercel\.app$/,
+          /^https:\/\/.*\.vercel\.com$/,
+          /^http:\/\/localhost:\d+$/, // allow ALL localhost ports
+        ]
+      : [
+          /^http:\/\/localhost:\d+$/, // allow Vite on any port
+        ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+    optionsSuccessStatus: 200,
+  })
+);
+
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
