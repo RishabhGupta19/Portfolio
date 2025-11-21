@@ -1516,7 +1516,7 @@ const Portfolio = () => {
               <CheckCircle size={16} className="text-green-400" /> Advanced Proficiency & Implementations
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-slate-400">
-               {['RESTful APIs', 'Postman', 'Cloudinary', 'Vercel', 'Render', 'JWT', 'Socket.io', 'FastAPI', 'RAG'].map(t => (
+               {['RESTful APIs', 'Postman', 'Cloudinary', 'Vercel', 'Render', 'JWT', 'Socket.io', 'FastAPI', 'RAG Pipeline Implementation'].map(t => (
                  <span key={t} className="text-sm px-4 py-2 bg-slate-900 rounded-full border border-slate-800 hover:border-cyan-400 hover:text-cyan-400 cursor-default transition-all shadow-sm">{t}</span>
                ))}
             </div>
