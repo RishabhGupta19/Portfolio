@@ -1712,7 +1712,7 @@ const Portfolio = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
-                        placeholder="John Doe"
+                        placeholder="John"
                         required
                       />
                    </div>
