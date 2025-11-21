@@ -1656,7 +1656,7 @@ const Portfolio = () => {
                      <div>
                         <h4 className="font-bold text-white">ServiceNow Certified Administrator</h4>
                         <p className="text-slate-400 text-sm mb-2">March 2025 - May 2025</p>
-                        <a href="https://drive.google.com/drive/folders/1nnu7eW3dEaXglIG5A3MUSpCcmP5Yad8G" className="text-xs text-cyan-400 hover:underline flex items-center gap-1">View Credential <ExternalLink size={10}/></a>
+                        <a href="https://drive.google.com/drive/folders/1nnu7eW3dEaXglIG5A3MUSpCcmP5Yad8G" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400 hover:underline flex items-center gap-1">View Credential <ExternalLink size={10}/></a>
                      </div>
                   </div>
                   <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors flex items-start gap-4">
@@ -1664,7 +1664,7 @@ const Portfolio = () => {
                      <div>
                         <h4 className="font-bold text-white">ServiceNow Application Developer</h4>
                         <p className="text-slate-400 text-sm mb-2">April 2025 - July 2025</p>
-                        <a href="https://drive.google.com/drive/folders/1nnu7eW3dEaXglIG5A3MUSpCcmP5Yad8G" className="text-xs text-purple-400 hover:underline flex items-center gap-1">View Credential <ExternalLink size={10}/></a>
+                        <a href="https://drive.google.com/drive/folders/1nnu7eW3dEaXglIG5A3MUSpCcmP5Yad8G" target="_blank" rel="noopener noreferrer" className="text-xs text-purple-400 hover:underline flex items-center gap-1">View Credential <ExternalLink size={10}/></a>
                      </div>
                   </div>
                </div>
