@@ -1162,27 +1162,7 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-  //   try {
-  //     const response = await fetch('https://portfolio-backend-yyxv.onrender.com/api/contact', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify(formData)
-  //     });
-  //     if (response.ok) {
-  //       setSubmitMessage('Message sent successfully!');
-  //       setFormData({ name: '', email: '', message: '' });
-  //     } else {
-  //       setSubmitMessage('Failed to send. Try again.');
-  //     }
-  //   } catch (error) {
-  //     setSubmitMessage('Error sending. Please email directly.');
-  //   }
-  //   setIsSubmitting(false);
-  //   setTimeout(() => setSubmitMessage(''), 5000);
-  // };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -1323,7 +1303,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative">
           
           {/* Available for Work Badge - Moved to Top Right of Hero Container */}
-          <div className="absolute top-0 right-0 hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-emerald-500/30 text-emerald-400 text-xs font-medium animate-fade-in-up">
+          <div className="absolute top-10 right-0 hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-emerald-500/30 text-emerald-400 text-xs font-medium animate-fade-in-up">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
