@@ -1073,8 +1073,8 @@
 
 import profilePic from '../Profile.jpg';
 // import { SpeedInsights } from "@vercel/speed-insights/react";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker } from "react-icons/fa";
-import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC } from "react-icons/si";
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker,FaBootstrap } from "react-icons/fa";
+import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC,SiTailwindcss } from "react-icons/si";
 import AIFitnessSection from './AIFitneddSection.jsx';
 import PortfolioAIChatbot from './AI';
 import Typewriter from './typewriter.jsx';
@@ -1109,6 +1109,8 @@ const Portfolio = () => {
     Git: <FaGitAlt className="inline text-red-500 mr-2 text-xl" />,
     AWS: <FaAws className="inline text-orange-500 mr-2 text-xl" />,
     Docker: <FaDocker className="inline text-blue-400 mr-2 text-xl" />,
+    Tailwind: <SiTailwindcss className="inline text-sky-400 mr-2 text-xl" />,
+    Bootstrap: <FaBootstrap className="inline text-purple-500 mr-2 text-xl" />,
   };
 
   const sections = ['home', 'about', 'skills', 'projects', 'ai-fitness', 'education', 'certificates', 'contact'];
