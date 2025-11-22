@@ -1472,7 +1472,7 @@ const Portfolio = () => {
                 <h3 className="text-xl font-bold">Frontend</h3>
               </div>
               <div className="flex flex-wrap gap-3">
-                {['React.js', 'HTML5', 'CSS3', 'JavaScript', 'EJS'].map(skill => (
+                {['React.js', 'HTML5', 'CSS3', 'JavaScript', 'EJS','Tailwind','Bootstrap'].map(skill => (
                   <div key={skill} className="flex items-center gap-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500/50 transition-colors">
                     {icons[skill]} <span className="text-sm text-slate-300">{skill}</span>
                   </div>
