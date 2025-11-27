@@ -1661,7 +1661,7 @@ const Portfolio = () => {
                     <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-green-500/50 transition-colors flex items-start gap-4">
                      <div className="p-3 bg-green-900/20 rounded-lg text-green-400"><Award size={24}/></div>
                      <div>
-                        <h4 className="font-bold text-white">AWS Academy Graduate - Cloud Foundations - Training Badge</h4>
+                        <h4 className="font-bold text-white">AWS Academy Graduate - Cloud Foundations</h4>
                         <p className="text-slate-400 text-sm mb-2">November 2025</p>
                         <a href="https://drive.google.com/file/d/1cZf6TmX3LsGlRxyrqXshfVJZNwfSzyA9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs text-green-400 hover:underline flex items-center gap-1">View Credential <ExternalLink size={10}/></a>
                      </div>
