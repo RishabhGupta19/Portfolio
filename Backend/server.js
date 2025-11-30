@@ -76,7 +76,7 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   optionsSuccessStatus: 200
 }));
-app.options('/api/:path*', cors());
+
 
 
 app.use('/api/', limiter);
