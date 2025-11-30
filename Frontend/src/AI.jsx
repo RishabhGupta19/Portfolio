@@ -431,92 +431,97 @@ const PortfolioAIChatbot = () => {
 
       {/* --- Main Chat Window --- */}
       {isOpen && (
-        <div className="fixed bottom-24 right-4 sm:right-6 w-[90vw] sm:w-[400px] md:w-[450px] h-[600px] max-h-[80vh] bg-[#0f172a]/90 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl flex flex-col overflow-hidden z-50 animate-in slide-in-from-bottom-10 fade-in duration-300">
-          
-          {/* Ambient Background Glow */}
-          <div className="absolute top-[-50px] left-[-50px] w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
-          <div className="absolute bottom-[-50px] right-[-50px] w-32 h-32 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="
+  fixed bottom-24 right-4 sm:right-6 
+  w-[90vw] sm:w-[400px] md:w-[450px] 
+  h-[550px]
+  bg-[#0f172a]/90 backdrop-blur-xl 
+  border border-white/10 rounded-lg shadow-2xl 
+  flex flex-col 
+  z-50 animate-in slide-in-from-bottom-10 fade-in duration-300
+">
 
-          {/* Header */}
-          <div className="relative p-4 bg-white/5 border-b border-white/5 flex items-center justify-between backdrop-blur-md">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg">
-                   <Bot size={20} className="text-white"/>
-                </div>
-                <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
-              </div>
-              <div>
-                <h3 className="font-bold text-white text-sm flex items-center gap-1">
-                  Portfolio AI <Sparkles size={12} className="text-yellow-400"/>
-                </h3>
-                <p className="text-[11px] text-cyan-200/70">Powered by RAG</p>
-              </div>
-            </div>
-            <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-full text-slate-400 hover:text-white transition-colors">
-              <X size={18}/>
-            </button>
-          </div>
+  {/* Ambient Background Glow */}
+  <div className="absolute top-[-50px] left-[-50px] w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+  <div className="absolute bottom-[-50px] right-[-50px] w-32 h-32 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-          {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-6 chat-scrollbar relative z-10">
-            {messageHistory.map((msg, idx) => (
-              <MessageBubble key={idx} message={msg} />
-            ))}
-            
-            {/* Loading Indicator */}
-            {isLoading && (
-              <div className="flex justify-start animate-in fade-in duration-300">
-                 <div className="bg-slate-800/80 border border-slate-700/50 px-4 py-3 rounded-2xl rounded-tl-none flex items-center gap-2 text-cyan-400 text-sm">
-                    <Loader2 size={16} className="animate-spin"/>
-                    <span>Analyzing portfolio...</span>
-                 </div>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
-
-          {/* Quick Prompts (Only show if history is short) */}
-          {messageHistory.length < 3 && !isLoading && (
-            <div className="px-4 pb-2 overflow-x-auto flex gap-2 scrollbar-hide z-10">
-              {quickQuestions.map((q, i) => (
-                <button 
-                  key={i}
-                  onClick={() => { setQuery(q); inputRef.current?.focus(); }}
-                  className="whitespace-nowrap text-xs px-3 py-1.5 bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-300 rounded-full transition-all hover:scale-105"
-                >
-                  {q}
-                </button>
-              ))}
-            </div>
-          )}
-
-          {/* Input Area */}
-          <div className="p-4 bg-slate-900/80 backdrop-blur-md border-t border-white/5 z-20">
-             <form onSubmit={handleQuery} className="relative flex items-center gap-2">
-               <input
-                 ref={inputRef}
-                 type="text"
-                 value={query}
-                 onChange={(e) => setQuery(e.target.value)}
-                 placeholder="Ask me anything..."
-                 className="w-full bg-slate-950/50 border border-slate-700 rounded-xl py-3 pl-4 pr-12 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all"
-               />
-               <button 
-                 type="submit"
-                 disabled={isLoading || !query.trim()}
-                 className="absolute right-2 bg-cyan-500 hover:bg-cyan-400 text-white p-2 rounded-lg disabled:opacity-50 disabled:hover:bg-cyan-500 transition-colors shadow-lg shadow-cyan-500/20"
-               >
-                 <Send size={16} className={isLoading ? 'opacity-0' : 'opacity-100'}/>
-                 {isLoading && <Loader2 size={16} className="absolute inset-0 m-auto animate-spin"/>}
-               </button>
-             </form>
-             <div className="text-center mt-2">
-               <p className="text-[10px] text-slate-600">AI can make mistakes. Check important info.</p>
-             </div>
-          </div>
-
+  {/* Header - Sticky */}
+  <div className="shrink-0 p-4 bg-white/5 border-b border-white/5 flex items-center justify-between backdrop-blur-md">
+    <div className="flex items-center gap-3">
+      <div className="relative">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg">
+          <Bot size={20} className="text-white"/>
         </div>
+        <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+      </div>
+      <div>
+        <h3 className="font-bold text-white text-sm flex items-center gap-1">
+          Portfolio AI <Sparkles size={12} className="text-yellow-400"/>
+        </h3>
+        <p className="text-[11px] text-cyan-200/70">Powered by RAG</p>
+      </div>
+    </div>
+    <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-full text-slate-400 hover:text-white transition-colors">
+      <X size={18}/>
+    </button>
+  </div>
+
+  {/* Scrollable Messages Area */}
+  <div className="flex-1 overflow-y-auto p-4 space-y-6 chat-scrollbar relative z-10">
+    {messageHistory.map((msg, idx) => (
+      <MessageBubble key={idx} message={msg} />
+    ))}
+
+    {isLoading && (
+      <div className="flex justify-start animate-in fade-in duration-300">
+        <div className="bg-slate-800/80 border border-slate-700/50 px-4 py-3 rounded-2xl  flex items-center gap-2 text-cyan-400 text-sm">
+          <Loader2 size={16} className="animate-spin"/>
+          <span>Analyzing portfolio...</span>
+        </div>
+      </div>
+    )}
+    <div ref={messagesEndRef} />
+  </div>
+
+  {/* Quick Prompts */}
+  {messageHistory.length < 3 && !isLoading && (
+    <div className="shrink-0 px-4 pb-2 overflow-x-auto flex gap-2 scrollbar-hide z-10">
+      {quickQuestions.map((q, i) => (
+        <button 
+          key={i}
+          onClick={() => { setQuery(q); inputRef.current?.focus(); }}
+          className="whitespace-nowrap text-xs px-3 py-1.5 bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 text-slate-300 hover:text-cyan-300 rounded-full transition-all hover:scale-105"
+        >
+          {q}
+        </button>
+      ))}
+    </div>
+  )}
+
+  {/* Input Area - Fixed */}
+  <div className="shrink-0 p-4 bg-slate-900/80 backdrop-blur-md border-t border-white/5 z-20">
+    <form onSubmit={handleQuery} className="relative flex items-center gap-2">
+      <input
+        ref={inputRef}
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Ask me anything..."
+        className="w-full bg-slate-950/50 border border-slate-700 rounded-xl py-3 pl-4 pr-12 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all"
+      />
+      <button 
+        type="submit"
+        disabled={isLoading || !query.trim()}
+        className="absolute right-2 bg-cyan-500 hover:bg-cyan-400 text-white p-2 rounded-lg disabled:opacity-50 disabled:hover:bg-cyan-500 transition-colors shadow-lg shadow-cyan-500/20"
+      >
+        <Send size={16} className={isLoading ? 'opacity-0' : 'opacity-100'}/>
+        {isLoading && <Loader2 size={16} className="absolute inset-0 m-auto animate-spin"/>}
+      </button>
+    </form>
+    <p className="text-[10px] text-slate-600 text-center mt-1">AI can make mistakes. Check important info.</p>
+  </div>
+
+</div>
       )}
     </>
   );
