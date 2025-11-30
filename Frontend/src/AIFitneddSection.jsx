@@ -280,4 +280,5 @@ Provide a JSON response with the following structure (only return valid JSON, no
   );
 };
 
-export default AIFitnessSection;
+export default React.memo(AIFitnessSection);
+
