@@ -1396,7 +1396,7 @@ const Portfolio = () => {
       {AboutSection}
       {SkillsSection}
       {ProjectsSection}
-      {AIFitnessSection} 
+      <AIFitnessSection /> 
       {EducationSection}
       {/* Certificates are in EducationSection via #certificates */}
       {ContactSection}
