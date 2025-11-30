@@ -1073,7 +1073,6 @@
 
 import profilePic from '../Profile.jpg';
 import { Analytics } from "@vercel/analytics/react";
-
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker,FaBootstrap } from "react-icons/fa";
 import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC,SiTailwindcss } from "react-icons/si";
