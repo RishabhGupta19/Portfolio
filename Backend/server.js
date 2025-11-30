@@ -65,7 +65,10 @@ app.use(cors({
     "http://localhost:5173",                // Explicitly allow Vite Localhost
     "http://localhost:3000",                // Allow standard React Localhost
     "https://portfolio-amber-nine-22.vercel.app", // Your Vercel Domain
-    "https://portfolio-backend-yyxv.onrender.com" // Your Backend Domain (for self-pinging)
+    "https://portfolio-backend-yyxv.onrender.com",
+    "https://portfolio-backend-3vyv.onrender.com",
+    "https://www.rishabhs.xyz/",
+    "https://portfolio-mu-navy-75.vercel.app/"// Your Backend Domain (for self-pinging)
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
