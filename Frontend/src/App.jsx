@@ -713,7 +713,9 @@ import {
 } from "react-icons/fa";
 import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC, SiTailwindcss } from "react-icons/si";
 
-const AIFitnessSection = React.lazy(() => import("./AIFitneddSection.jsx"));
+// const AIFitnessSection = React.lazy(() => import("./AIFitneddSection.jsx"));
+import AIFitnessSection from './AIFitneddSection.jsx';
+
 
 import PortfolioAIChatbot from './AI';
 import Typewriter from './typewriter.jsx';
@@ -1128,9 +1130,7 @@ const Portfolio = () => {
       </div>
     </section>
   ), [projectList]);
-<Suspense fallback={<div className="text-center py-20 text-slate-500">Loading...</div>}>
-  <AIFitnessSection />
-</Suspense>
+
 
   const EducationSection = useMemo(() => (
     <section id="education" className="py-24 px-6 relative z-10 bg-slate-950/30">
@@ -1396,7 +1396,7 @@ const Portfolio = () => {
       {AboutSection}
       {SkillsSection}
       {ProjectsSection}
-      {/* <AIFitnessSection /> */}
+      {AIFitnessSection} 
       {EducationSection}
       {/* Certificates are in EducationSection via #certificates */}
       {ContactSection}
