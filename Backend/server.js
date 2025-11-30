@@ -64,7 +64,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",                // Explicitly allow Vite Localhost
     "http://localhost:3000",                // Allow standard React Localhost
-    "https://portfolio-amber-nine-22.vercel.app", // Your Vercel Domain
+     // Your Vercel Domain
     "https://portfolio-backend-yyxv.onrender.com",
     "https://portfolio-backend-3vyv.onrender.com",
     "https://www.rishabhs.xyz",
@@ -76,7 +76,7 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   optionsSuccessStatus: 200
 }));
-
+app.options('/api/:path*', cors());
 
 
 app.use('/api/', limiter);
