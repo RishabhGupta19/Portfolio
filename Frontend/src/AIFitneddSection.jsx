@@ -164,7 +164,7 @@ Provide a JSON response with the following structure (only return valid JSON, no
                 </>
               ) : (
                 <>
-                  <Zap size={20} className="group-hover:rotate-12 transition-transform duration-300" />
+                  <Zap size={20} className="cursor-pointer group-hover:rotate-12 transition-transform duration-300" />
                   <span>Analyze Fit</span>
                 </>
               )}
