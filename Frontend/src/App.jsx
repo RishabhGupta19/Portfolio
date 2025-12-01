@@ -11,8 +11,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import profilePic from '../Profile.jpg';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { lazy, Suspense } from "react";
-const AIFitnessSection = lazy(() => import("./AIFitneddSection.jsx"));
+// import { lazy, Suspense } from "react";
+// const AIFitnessSection = lazy(() => import("./AIFitneddSection.jsx"));
 
 import {
   FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker, FaBootstrap
@@ -20,7 +20,7 @@ import {
 import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC, SiTailwindcss } from "react-icons/si";
 
 // const AIFitnessSection = React.lazy(() => import("./AIFitneddSection.jsx"));
-// import AIFitnessSection from './AIFitneddSection.jsx';
+import AIFitnessSection from './AIFitneddSection.jsx';
 
 
 import PortfolioAIChatbot from './AI';
@@ -702,14 +702,8 @@ const Portfolio = () => {
       {AboutSection}
       {SkillsSection}
       {ProjectsSection}
-      {/* <AIFitnessSection />  */}
-      <Suspense fallback={
-            <div className="text-center py-10 text-slate-400">
-              Loading AI Fitness...
-            </div>
-          }>
-            <AIFitnessSection />
-          </Suspense>
+       <AIFitnessSection /> 
+      
 
       {EducationSection}
       {/* Certificates are in EducationSection via #certificates */}
