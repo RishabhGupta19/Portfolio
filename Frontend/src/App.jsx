@@ -702,7 +702,7 @@ const Portfolio = () => {
       {AboutSection}
       {SkillsSection}
       {ProjectsSection}
-       <AIFitnessSection /> 
+       {/* <AIFitnessSection />  */}
       
 
       {EducationSection}
