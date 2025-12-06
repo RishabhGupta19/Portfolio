@@ -65,6 +65,13 @@ const Portfolio = () => {
   }), []);
 
   const projectList = useMemo(() => ([
+     {
+      title: 'Ganesh Akhara Mandir Official Website',
+      desc: 'Official website for Ganesh Akhara Mandir of my hometown featuring real-time visitor traffic, online accommodation booking, inquiry handling, and automated email workflows. Includes a secure admin dashboard to review, accept, or reject booking requests.',
+      tech: ['Node.js', 'Express' , 'PostgreSQL' , 'Resend Email' , 'React' , 'Tailwind'],
+      link: 'https://www.ganeshakhara.com/',
+      color: 'from-cyan-500 to-orange-500'
+    },
     {
       title: 'Daily Drift',
       desc: 'A robust blogging platform featuring full CRUD capabilities, JWT authentication, and a responsive design.',
