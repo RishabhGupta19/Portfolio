@@ -19,7 +19,7 @@ import {
 } from "react-icons/fa";
 import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC, SiTailwindcss } from "react-icons/si";
 
-// const AIFitnessSection = React.lazy(() => import("./AIFitneddSection.jsx"));
+// const FitnessSection = React.lazy(() => import("./FitneddSection.jsx"));
 import AIFitnessSection from './AIFitneddSection.jsx';
 
 
@@ -41,7 +41,7 @@ const Portfolio = () => {
   const [submitMessage, setSubmitMessage] = useState('');
 
   // ---------- Constants & Memoized Data ----------
-  const sections = useMemo(() => ['home', 'about', 'skills', 'projects', 'ai-fitness', 'education', 'certificates', 'contact'], []);
+  const sections = useMemo(() => ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'], []);
 
   const icons = useMemo(() => ({
     React: <FaReact className="inline text-cyan-400 mr-2 text-xl" />,
