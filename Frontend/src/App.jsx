@@ -236,7 +236,7 @@ const Portfolio = () => {
             <button onClick={() => scrollToSection('contact')} className=" cursor-pointer w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-slate-900 font-bold hover:bg-cyan-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
               Let's Talk
             </button>
-            <a href="https://drive.google.com/file/d/15prJAuk0rsp78Oxb6FWQSOyPUffXRdNo/view?usp=drivesdk" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-slate-700 hover:border-cyan-500 text-white hover:bg-cyan-500/10 transition-all flex items-center justify-center gap-2">
+            <a href="https://drive.google.com/file/d/1uPD9WI20gxwG4whOVioZm7K5WI0XvGdB/view?usp=sharing" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-slate-700 hover:border-cyan-500 text-white hover:bg-cyan-500/10 transition-all flex items-center justify-center gap-2">
               Download Resume <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform"/>
             </a>
           </div>
@@ -367,7 +367,7 @@ const Portfolio = () => {
               <h3 className="text-xl font-bold">Backend</h3>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['Node.js', 'Express.js', 'Java', 'Python', 'C'].map(skill => (
+              {['Node.js', 'Express.js', 'Java', 'Python', 'C','TypeScript'].map(skill => (
                 <div key={skill} className="flex items-center gap-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-700">
                   {icons[skill]} <span className="text-sm text-slate-300">{skill}</span>
                 </div>
