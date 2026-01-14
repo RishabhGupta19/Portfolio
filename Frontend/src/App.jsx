@@ -9,6 +9,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import profilePic from '../Profile.jpg';
+import Scene3D from './Scene3D';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 // import { lazy, Suspense } from "react";
@@ -649,7 +650,8 @@ const Portfolio = () => {
   </div>
 
 </div>
-
+{/* --- NEW 3D BACKGROUND --- */}
+      <Scene3D />
 
       {/* Navigation */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] md:w-auto max-w-5xl z-50 transition-all duration-300">
