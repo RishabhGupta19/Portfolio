@@ -9,7 +9,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import profilePic from '../Profile.jpg';
-import Scene3D from './Scene3D';
+import Scene3D from './Scene3D.jsx';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 // import { lazy, Suspense } from "react";
