@@ -21,7 +21,7 @@ import {
 import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC, SiTailwindcss } from "react-icons/si";
 
 // const FitnessSection = React.lazy(() => import("./FitneddSection.jsx"));
-import AIFitnessSection from './AIFitneddSection.jsx';
+// import AIFitnessSection from './AIFitneddSection.jsx';
 
 
 import PortfolioAIChatbot from './AI';
