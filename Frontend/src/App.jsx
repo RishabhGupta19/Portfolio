@@ -720,7 +720,7 @@ const Portfolio = () => {
 
       {/* Footer */}
       <footer className="py-8 text-center text-slate-600 text-sm relative z-10 border-t border-slate-800/50">
-        <p>&copy; 2025 Rishabh Gupta. Crafted with React & Tailwind.</p>
+        <p>&copy; 2026 Rishabh Gupta. Crafted with React & Tailwind.</p>
       </footer>
 
       <PortfolioAIChatbot/>
