@@ -237,7 +237,7 @@ const Portfolio = () => {
             <button onClick={() => scrollToSection('contact')} className=" cursor-pointer w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-slate-900 font-bold hover:bg-cyan-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
               Let's Talk
             </button>
-            <a href="https://drive.google.com/file/d/1sXWaPM4Q5ljbceHbiRXxi4R_243neclp/view?usp=sharing" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-slate-700 hover:border-cyan-500 text-white hover:bg-cyan-500/10 transition-all flex items-center justify-center gap-2">
+            <a href="https://drive.google.com/file/d/1hWpkVSGGIuATh4bzWYSvGJb9EDABLS6D/view?usp=sharing" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-slate-700 hover:border-cyan-500 text-white hover:bg-cyan-500/10 transition-all flex items-center justify-center gap-2">
               Download Resume <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform"/>
             </a>
           </div>
