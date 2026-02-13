@@ -1,7 +1,3 @@
-
-
-
-
 // New code 
 
 
@@ -18,7 +14,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import {
   FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaDocker, FaBootstrap
 } from "react-icons/fa";
-import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC, SiTailwindcss } from "react-icons/si";
+import { SiExpress, SiEjs, SiMongodb, SiMysql, SiC, SiTailwindcss, SiDjango, SiPostgresql, SiSqlite } from "react-icons/si";
 
 // const FitnessSection = React.lazy(() => import("./FitneddSection.jsx"));
 import AIFitnessSection from './AIFitneddSection.jsx';
@@ -42,7 +38,7 @@ const Portfolio = () => {
   const [submitMessage, setSubmitMessage] = useState('');
 
   // ---------- Constants & Memoized Data ----------
-  const sections = useMemo(() => ['home', 'about', 'skills', 'projects', 'education', 'certificates', 'contact'], []);
+  const sections = useMemo(() => ['home', 'about', 'skills', 'projects', 'experience', 'education', 'certificates', 'contact'], []);
 
   const icons = useMemo(() => ({
     React: <FaReact className="inline text-cyan-400 mr-2 text-xl" />,
@@ -58,6 +54,9 @@ const Portfolio = () => {
     C: <SiC className="inline text-blue-400 mr-2 text-xl" />,
     MongoDB: <SiMongodb className="inline text-green-500 mr-2 text-xl" />,
     MySQL: <SiMysql className="inline text-blue-500 mr-2 text-xl" />,
+    Django: <SiDjango className="inline text-green-600 mr-2 text-xl" />,
+    PostgreSQL: <SiPostgresql className="inline text-blue-400 mr-2 text-xl" />,
+    SQL: <SiSqlite className="inline text-slate-300 mr-2 text-xl" />,
     Git: <FaGitAlt className="inline text-red-500 mr-2 text-xl" />,
     AWS: <FaAws className="inline text-orange-500 mr-2 text-xl" />,
     Docker: <FaDocker className="inline text-blue-400 mr-2 text-xl" />,
@@ -134,6 +133,21 @@ const Portfolio = () => {
     ::-webkit-scrollbar-track { background: #020617; }
     ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+
+    /* Timeline connector animation */
+    @keyframes timelinePulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .timeline-line {
+      animation: timelinePulse 3s ease-in-out infinite;
+    }
+
+    /* Experience card hover glow */
+    .exp-card:hover {
+      box-shadow: 0 0 0 1px rgba(6,182,212,0.25), 0 8px 40px rgba(6,182,212,0.08);
+    }
   `;
 
   // ---------- Optimized scroll listener (rAF throttled) ----------
@@ -206,13 +220,7 @@ const Portfolio = () => {
   const HeroSection = useMemo(() => (
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 pb-10 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative">
-        <div className="absolute top-10 right-0 hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/40 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          Available for immediate joining
-        </div>
+        
 
         {/* Text */}
         <div className="order-2 md:order-1 space-y-6 text-center md:text-left z-10">
@@ -368,7 +376,7 @@ const Portfolio = () => {
               <h3 className="text-xl font-bold">Backend</h3>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['Node.js', 'Express.js', 'Java', 'Python', 'C','TypeScript'].map(skill => (
+              {['Node.js', 'Express.js', 'Django', 'Java', 'Python', 'C'].map(skill => (
                 <div key={skill} className="flex items-center gap-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-700">
                   {icons[skill]} <span className="text-sm text-slate-300">{skill}</span>
                 </div>
@@ -382,7 +390,7 @@ const Portfolio = () => {
               <h3 className="text-xl font-bold">DevOps & DB</h3>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['MongoDB', 'MySQL', 'Git', 'AWS', 'Docker'].map(skill => (
+              {['MongoDB', 'MySQL', 'PostgreSQL', 'SQL', 'Git', 'AWS', 'Docker'].map(skill => (
                 <div key={skill} className="flex items-center gap-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-700">
                   {icons[skill]} <span className="text-sm text-slate-300">{skill}</span>
                 </div>
@@ -445,9 +453,132 @@ const Portfolio = () => {
     </section>
   ), [projectList]);
 
+  // ==================== EXPERIENCE SECTION (NEW) ====================
+  const ExperienceSection = useMemo(() => (
+    <section id="experience" className="py-24 px-6 relative z-10 bg-slate-950/30">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Experience</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto rounded-full"></div>
+          <p className="text-slate-400 mt-4">Where I've worked and contributed</p>
+        </div>
+
+        {/* Timeline Container */}
+        <div className="relative">
+
+          {/* ── Vertical spine ── */}
+          <div className="absolute left-6 md:left-1/2 top-0 h-full w-px md:-translate-x-1/2 overflow-hidden">
+            {/* base track */}
+            <div className="absolute inset-0 bg-slate-800"></div>
+            {/* animated fill */}
+            <div
+              className="absolute top-0 left-0 right-0 bg-gradient-to-b from-cyan-500 via-blue-500 to-transparent timeline-line"
+              style={{ height: '100%' }}
+            ></div>
+          </div>
+
+          {/* ── Experience Item — Meeraq ── */}
+          <div className="relative flex items-start gap-0 md:gap-0 group">
+
+            {/* Mobile dot (left-aligned) | Desktop dot (centered) */}
+            <div className="absolute left-[14px] md:left-1/2 top-8 md:-translate-x-1/2 z-10 flex-shrink-0">
+              <div className="w-[18px] h-[18px] rounded-full bg-[#050914] border-2 border-cyan-500 shadow-[0_0_14px_rgba(6,182,212,0.7)] flex items-center justify-center">
+                <div className="w-[6px] h-[6px] rounded-full bg-cyan-400"></div>
+              </div>
+            </div>
+
+            {/* LEFT side — date label (desktop only) */}
+            <div className="hidden md:flex md:w-1/2 pr-10 justify-end items-start pt-7">
+              <div className="text-right">
+                <span className="text-sm font-semibold text-slate-300">Feb 2, 2025 – Present</span>
+                <p className="text-xs text-slate-600 mt-1">Bengaluru, India · On-site</p>
+              </div>
+            </div>
+
+            {/* RIGHT side — card */}
+            <div className="w-full pl-14 md:pl-10 md:w-1/2 pb-16">
+              <div className="exp-card bg-slate-900/70 border border-slate-800 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+
+                {/* Top gradient bar */}
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-2xl"></div>
+
+                {/* Status + mobile date */}
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full uppercase tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                    Current Role
+                  </span>
+                  {/* mobile-only date */}
+                  <span className="md:hidden text-xs text-slate-500">Feb 2, 2025 – Present</span>
+                </div>
+
+                {/* Role & Company */}
+                <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug mb-1">
+                  Software Development Engineer Intern
+                </h3>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-cyan-400 font-semibold text-base">Meeraq</span>
+                  <span className="text-slate-600 text-sm">·</span>
+                  <span className="text-slate-500 text-sm">Internship</span>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-slate-800 my-4"></div>
+
+                {/* Description */}
+                <p className="text-slate-400 text-sm leading-relaxed mb-5">
+                  Contributing to full-stack development at Meeraq — building scalable product features with React and Django, designing RESTful APIs, and working with SQL databases to deliver production-ready software solutions.
+                </p>
+
+                {/* Responsibilities */}
+                <ul className="space-y-2 mb-5">
+                  {[
+                    'Building and maintaining full-stack features using React & Django',
+                    'Designing and integrating RESTful APIs with Django REST Framework',
+                    'Working with SQL databases MySQL for data modelling and queries',
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm text-slate-400">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-500/60 flex-shrink-0"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-2">
+                  {['React', 'Django', 'Python', 'MySQL', 'REST APIs', 'Git'].map(tag => (
+                    <span key={tag} className="text-xs px-3 py-1 bg-slate-800 border border-slate-700/80 rounded-full text-slate-300 hover:border-cyan-500/30 hover:text-cyan-300 transition-colors">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Future placeholder ── */}
+          <div className="relative flex items-start group opacity-25 pointer-events-none select-none">
+            <div className="absolute left-[14px] md:left-1/2 top-5 md:-translate-x-1/2 z-10">
+              <div className="w-[18px] h-[18px] rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center">
+                <div className="w-[6px] h-[6px] rounded-full bg-slate-700"></div>
+              </div>
+            </div>
+            <div className="hidden md:block md:w-1/2"></div>
+            <div className="w-full pl-14 md:pl-10 md:w-1/2">
+              <div className="border border-dashed border-slate-800 rounded-2xl px-6 py-4 text-slate-600 text-sm italic">
+                More experiences on the horizon...
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  ), []);
+  // ==================== END EXPERIENCE SECTION ====================
 
   const EducationSection = useMemo(() => (
-    <section id="education" className="py-24 px-6 relative z-10 bg-slate-950/30">
+    <section id="education" className="py-24 px-6 relative z-10">
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -712,8 +843,8 @@ const Portfolio = () => {
       {SkillsSection}
       {ProjectsSection}
        {/* <AIFitnessSection />  */}
-      
 
+      {ExperienceSection}
       {EducationSection}
       {/* Certificates are in EducationSection via #certificates */}
       {ContactSection}
@@ -731,4 +862,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
